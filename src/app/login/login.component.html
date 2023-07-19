@@ -1,0 +1,40 @@
+<div class="text-center mt-5">
+    <form style="display: flex;flex-direction: column;align-items: center;margin: 5rem 0;">
+        <!-- oneway binding -->
+        string interpollation<br>
+        <h1>{{this.m1}}</h1>
+        <label>{{username}}</label>
+        ****************************************************************************<br>
+        $event binding<br>
+        <input type="text" placeholder="username" (change)="user($event)"/>
+        ****************************************************************************<br>
+        property binding<br>
+        <label>password</label>
+        <input type="password" (change)="pass($event)"  [placeholder]="pname"/><br>
+        event binding<br>
+        <button type="submit" (click)="login()" class="btn btn-primary">Chick me</button>
+        *************************************************************<br>
+        event binding using template rendering variable
+        <input #inputuser type="text" placeholder="username">
+        <button type="button" (click)="user1(inputuser)">click</button>
+        **********************************************************************<br>
+        variable used to pass values in html to ts files<br>
+        <input [(ngModel)]="userin" type="text" name="username" id="userinput1" placeholder="user"/>
+        <input [(ngModel)]="psw" name="password" type="password" placeholder="password"/>
+        <button type="button" (click)="storevariable()">variableStorage</button>
+        **********************************************************************<br>
+        Routing
+        <a href="signup"> signup href</a>
+        or
+        <a routerLink="signup"> signup routerlink</a>
+        button click
+        <button type="button" (click)="buttonrouting()">button routing</button>
+        ********************************************************************************<br>
+        angular servise is a ts file ,the datas and methods of servise file can access any components of that perticular module
+
+        servise creation command :-ng g service servicename<br>
+
+        {{serivcedata}}
+        <button type="button" (click)="serviselogin()"> service Mathord</button>
+    </form>
+</div>
